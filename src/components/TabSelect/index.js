@@ -9,7 +9,8 @@ const TabSelect = ({ value, options, onChange }) => {
           <li
             key={opt.value}
             className={`tab-item ${opt.value === value ? 'selected' : ''}`}
-            onClick={() => onChange(opt.value)}>
+            onClick={() => onChange(opt.value)}
+          >
             {opt.name}
           </li>
         ))}
