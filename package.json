@@ -49,6 +49,7 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
+    "lint-staged": "^10.5.4",
     "pre-commit": "^1.2.2",
     "react": "^17.0.1",
     "stylelint": "^13.9.0",
