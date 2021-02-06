@@ -5,6 +5,7 @@
  */
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -32,17 +33,31 @@ module.exports = {
         },
       },
       { 
-        test: /\.css$/, 
-        use: ['style-loader','css-loader']
-      },
-      {
-        test: /\.less$/i,
-        loader: "less-loader" // 将 Less 文件编译为 CSS 文件
-      },
+        test: /\.(css|less)$/, 
+        use: [
+          'style-loader',
+          // MiniCssExtractPlugin.loader, 
+          {
+            loader: 'css-loader', 
+            options: {
+              modules: {
+                localIdentName: "[local]--[hash:base64:5]",
+                // localIdentHashPrefix: "hash",
+                exportLocalsConvention: "camelCase",
+              },
+            }
+          },
+          'less-loader'
+        ],
+      }
     ],
   },
   plugins: [
     // 清除打包文件夹
     new CleanWebpackPlugin(),
+    // new MiniCssExtractPlugin({
+      // filename: '[name].css',
+      // chunkFilename: '[id].[contenthash:8].css',
+    // }),
   ],
 };

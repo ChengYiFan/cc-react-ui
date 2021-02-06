@@ -1,3 +1,4 @@
 import TabSelect from './components/TabSelect';
- 
-export default TabSelect
+import Modal from './components/Modal';
+
+export { TabSelect, Modal };

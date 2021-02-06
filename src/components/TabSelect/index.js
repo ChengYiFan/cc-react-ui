@@ -1,14 +1,14 @@
 import React from 'react';
-import './index.css';
+import styles from './index.less';
 
 const TabSelect = ({ value, options, onChange }) => {
   return (
-    <div className='tab-selector'>
+    <div className={styles.tabSelector}>
       <ul>
         {options.map((opt) => (
           <li
             key={opt.value}
-            className={`tab-item ${opt.value === value ? 'selected' : ''}`}
+            className={`${opt.value === value ? styles.selected : ''}`}
             onClick={() => onChange(opt.value)}
           >
             {opt.name}
