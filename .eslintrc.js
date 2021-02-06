@@ -41,5 +41,6 @@ module.exports = {
     "consistent-return": 0,
     "react/no-this-in-sfc": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "prettier/prettier": "off",
   },
 };
