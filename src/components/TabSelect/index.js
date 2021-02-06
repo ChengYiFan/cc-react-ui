@@ -1,17 +1,17 @@
 import React from 'react';
 import './index.css';
-const TabSelect = ({ value, options, onChange, }) => {
-  console.log(value, options, onChange);
+
+const TabSelect = ({ value, options, onChange }) => {
   return (
     <div className="tab-selector">
       <ul>
-        {options.map(opt => (
+        {options.map((opt) => (
           <li
             key={opt.value}
             className={`tab-item ${opt.value === value ? "selected" : ""}`}
             onClick={() => onChange(opt.value)}
           >
-            {opt.name}  
+            {opt.name}
           </li>
         ))}
       </ul>
@@ -19,4 +19,4 @@ const TabSelect = ({ value, options, onChange, }) => {
   );
 };
 
-export default TabSelect
+export default TabSelect;
