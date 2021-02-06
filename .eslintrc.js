@@ -19,7 +19,6 @@ module.exports = {
   },
   plugins: ["react", "import", "react-hooks"],
   rules: {
-    "import/no-extraneous-dependencies": [2, { devDependencies: true }],
     "import/no-unresolved": [2, { ignore: ["^@/", "appconfig"] }],
     "react/jsx-filename-extension": 0,
     "react/prop-types": 0,

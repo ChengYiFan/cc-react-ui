@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.css'
+import React from 'react';
+import './index.css';
 
 const TabSelect = ({ value, options, onChange }) => {
   return (
@@ -15,7 +15,7 @@ const TabSelect = ({ value, options, onChange }) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default TabSelect
+export default TabSelect;
